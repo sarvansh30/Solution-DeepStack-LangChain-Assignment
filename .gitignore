@@ -1,0 +1,11 @@
+# Ignore virtual environment
+src/myenv/
+
+# Ignore Chroma storage
+src/chroma_storage/  
+
+# Ignore environment variables
+src/.env
+
+
+src/__pycache__
