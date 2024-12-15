@@ -21,7 +21,7 @@ class CharacterExtractor:
             - relations: List of character relationships
             - characterType: Role in the story
 
-            If the character is NOT clearly present, return only character name and status: NOT present in any stories."""),
+            If you don't find the character in any story then (BE STRICT with the checking), return only -name and  -status: NOT present in any stories."""),
             ("human", "Character Name: {character_name}\n\nStory Context: {story_context}")
         ])
         self.json_parser = JsonOutputParser()
