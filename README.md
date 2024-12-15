@@ -21,8 +21,7 @@ project-root/
 ├── dataset/
 │   └── stories/
 │
-└── README.md
-            
+└── README.md      
 ```
 
 ---
@@ -58,7 +57,7 @@ Download or create a directory named `stories/` in the root directory. Place you
 Run the following command to process the stories, compute embeddings, and store them in a vector database:
 ```bash
 python cli.py compute-embeddings --input-dir <path to stories dataset>
-eg:- python cli.py compute-embeddings --input-dir D:\2024\Deepstack\data\stories
+eg:- python cli.py compute-embeddings --input-dir D:\2024\Deepstack\dataset\stories
 ```
 This command will:
 - Compute embeddings for all stories in the `stories/` directory.
@@ -76,8 +75,10 @@ This will output a JSON object with the following structure:
 {
   "name": "Mr Holohan",
   "storyTitle": "A Mother",
-  "summary": "Mr Holohan, assistant secretary of the Eire Abu Society, is arranging a series of concerts and has a game leg for which his friends call him Hoppy Holohan. He walks up and down constantly, stands by the hour at street corners arguing, and makes notes. However, it is Mrs Kearney who arranges everything in the end.",
-  "relations": [],
+  "summary": "Mr Holohan is the assistant secretary of the Eire Abu Society and has a game leg, which earned him the nickname 'Hoppy Holohan'. He spends a significant amount of time arranging a series of concerts for the society and, despite his efforts, Mrs Kearney ends up taking charge and finalizing the arrangements.",
+  "relations": [
+    "Mrs Kearney: Assists Mr Holohan in arranging concerts, eventually taking over the task completely."
+  ],
   "characterType": "Supporting Character"
 }
 ```
@@ -88,6 +89,17 @@ This will output a JSON object with the following structure:
 
 - If the directory specified in `compute-embeddings` does not exist, an error will be displayed.
 - If the specified character is not found, the program will gracefully handle the case and return an appropriate message.
+```bash
+python cli.py get-character-info --name "<character_name>"
+eg:- python cli.py get-character-info --name "Sarvansh Pachori"
+```
+This will output a JSON object with the following structure:
+```json
+{
+  "name": "Sarvansh Pachori",
+  "status": "NOT present in any stories"
+}
+```
 
 ---
 
