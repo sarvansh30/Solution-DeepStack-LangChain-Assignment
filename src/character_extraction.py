@@ -70,12 +70,4 @@ class CharacterExtractor:
 
 def extract_character_info(character_name: str):
     extractor = CharacterExtractor()
-    try:
-        character_info = extractor.extract_character_info(character_name)
-        # If the extraction_chain returns valid character information
-        if character_info.get("name") == "-1":
-            print(f"Character Name: {character_name} is NOT PRESENT in any story.")
-        else:
-            return character_info
-    except ValueError as e:
-        print(e)
+    return extractor.extract_character_info(character_name)
