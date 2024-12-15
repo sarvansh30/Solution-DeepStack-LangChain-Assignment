@@ -9,15 +9,20 @@ This project uses **LangChain** and **MistralAI** to extract structured informat
 The project is organized as follows:
 
 ```
-.
-|-- cli.py                # Main CLI script to interact with the program
-|-- embeddings.py         # Script for computing and storing embeddings
-|-- character_extraction.py # Script for extracting structured character information
-|-- .env                  # Environment file for storing API keys
-|-- requirements.txt      # Dependencies required for the project
-|-- README.md             # Project documentation
-|-- chroma_storage/       # Directory for ChromaDB storage (auto-created)
-|-- stories/              # Directory containing story files
+project-root/
+│
+├── src/
+│   ├── embeddings.py (or .js)
+│   ├── character_extraction.py (or .js)
+│   └── cli.py (or .js)
+|   ├── requirements.txt
+│   └── .env 
+|
+├── dataset/
+│   └── stories/
+│
+└── README.md
+            
 ```
 
 ---
