@@ -52,6 +52,5 @@ class StoryEmbedder:
         print("Embeddings computed and stored successfully.")
 
 def compute_story_embeddings(stories_dir: str):
-    """Wrapper function to compute embeddings."""
     embedder = StoryEmbedder()
     embedder.compute_embeddings(stories_dir)
