@@ -16,7 +16,7 @@ class StoryEmbedder:
         self.llm = ChatMistralAI()
         
         self.prompt = ChatPromptTemplate.from_messages([
-            ("system", "Extract key metadata from the following story:"),
+            ("system", "Extract key metadata from the following story it will be used later for character information extraction so give data accordingly:"),
             ("human", "{story}")
         ])
         
